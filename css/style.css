@@ -53,11 +53,11 @@ section{
 
 
 #coin.isHeads {
-    animation: flipHeads 3s ease-out forwards;
+    animation: flipHeads 2s ease-out forwards;
 }
 
 #coin.isTails {
-    animation: flipTails 3s ease-out forwards;
+    animation: flipTails 2s ease-out forwards;
 }
 
 /* ANIMATION */
