@@ -1,3 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
 body{
     background-color: cadetblue;
+}
+
+header{
+    height: 20vh;
+    padding: 3rem;
+    text-align: center;
+
+}
+
+section{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+#coin {
+    width: 128px;
+    height: 128px;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+#coin div{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+#coin .heads{
+    background-color: darkgoldenrod;
+    z-index: 100;
+}
+
+#coin .tails{
+    background-color: darkmagenta;
+    transform: rotateY(-180deg);
+}
+
+
+#coin.isHeads {
+    animation: flipHeads 3s ease-out forwards;
+}
+
+#coin.isTails {
+    animation: flipTails 3s ease-out forwards;
+}
+
+/* ANIMATION */
+@keyframes flipHeads {
+    from   {
+        transform: rotateY(0);
+    }
+    to{
+        transform: rotateY(1800deg);
+    }
+}
+
+@keyframes flipTails {
+    from   {
+        transform: rotateY(0);
+    }
+    to{
+        transform: rotateY(1980deg);
+    }
 }
